@@ -4,8 +4,8 @@ require 'db.php';
 $errores = [];
 $exito = '';
 
-// CONFIGURA AQUÍ LA CLAVE QUE SOLO LOS ADMINISTRADORES CONOCEN
-$CLAVE_ADMIN = '123456789'; // cámbiala por la que quieras
+// Clave de administradores
+$CLAVE_ADMIN = '123456789';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre    = $_POST['nombre'] ?? '';
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errores[] = 'El usuario ya existe';
     }
 
-    // Si elige rol ADMINISTRADOR, validar clave especial
+    
     if ($rol === 'ADMINISTRADOR') {
         if ($clave_admin_ingresada !== $CLAVE_ADMIN) {
             $errores[] = 'Clave de administrador incorrecta';
@@ -140,7 +140,7 @@ function toggleClaveAdmin() {
     }
 }
 
-// Inicializar al cargar (por si hay errores y ya estaba seleccionado ADMINISTRADOR)
+// Inicializar al cargar
 toggleClaveAdmin();
 </script>
 </body>
