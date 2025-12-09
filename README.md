@@ -43,3 +43,8 @@ El script SQL para crear la base de datos está en:
 ### Diagrama de Casos de Uso
 
 ![Casos de uso](PNG/CASOS%20DE%20USO.png)
+
+## Prototipo en Figma
+
+[![Prototipo en Figma](PNG/figma-prototipo.png)]
+(https://www.figma.com/design/tV3GLAKigTK7OUxLz2nHAS/Login-fidel?node-id=0-1&t=qbs3Jjmn3ZzE1pmE-1)
