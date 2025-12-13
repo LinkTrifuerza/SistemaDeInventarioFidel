@@ -55,33 +55,33 @@ falta
 
 ### Relaciones del modelo
 • Empleado – VentaPrueba
-• 1 Empleado → muchas ventas de prueba
-• Relación 1 a N (Empleado registra las ventas de prueba)
+ 1 Empleado → muchas ventas de prueba
+ Relación 1 a N (Empleado registra las ventas de prueba)
 • Empleado – OrdenProveedor
-• 1 Empleado → muchas órdenes a proveedores
-• Relación 1 a N (Administrador que genera órdenes)
+ 1 Empleado → muchas órdenes a proveedores
+ Relación 1 a N (Administrador que genera órdenes)
 
 • Proveedor – Producto
-• 1 Proveedor → muchos productos
-• Cada producto tiene un proveedor asignado
-• Relación 1 a N
+ 1 Proveedor → muchos productos
+ Cada producto tiene un proveedor asignado
+ Relación 1 a N
 • OrdenProveedor – DetalleOrdenProveedor – Producto
-• Una orden contiene varios productos comprados
-• Un producto puede estar en muchas órdenes
-• Relación N a N resuelta con DetalleOrdenProveedor (1 OrdenProveedor → N
+ Una orden contiene varios productos comprados
+ Un producto puede estar en muchas órdenes
+ Relación N a N resuelta con DetalleOrdenProveedor (1 OrdenProveedor → N
 Detalles, 1 Producto → N Detalles)
 • VentaPrueba – DetalleVentaPrueba – Producto
-• Una venta de prueba contiene varios productos
-• Un producto puede estar en muchas ventas de prueba
-• Relación N a N resuelta con DetalleVentaPrueba
+ Una venta de prueba contiene varios productos
+ Un producto puede estar en muchas ventas de prueba
+ Relación N a N resuelta con DetalleVentaPrueba
 • Producto – Notificacion
-• 1 Producto → muchas notificaciones de stock
-• Relación 1 a N (notificaciones generadas cuando el stock llega a mínimo/máximo)
+ 1 Producto → muchas notificaciones de stock
+ Relación 1 a N (notificaciones generadas cuando el stock llega a mínimo/máximo)
 • Producto – MovimientoStock
-• 1 Producto → muchos movimientos de stock (entradas/salidas)
-• Relación 1 a N
+ 1 Producto → muchos movimientos de stock (entradas/salidas)
+ Relación 1 a N
 • Empleado – Notificacion
-• 1 Empleado puede recibir muchas notificaciones
+ 1 Empleado puede recibir muchas notificaciones
 ## 6. ARQUITECTURA DEL SISTEMA
 Es una arquitectura monolítica PHP por módulos con capas básicas.
 
