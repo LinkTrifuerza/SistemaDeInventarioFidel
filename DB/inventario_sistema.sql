@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-12-2025 a las 18:42:43
+-- Tiempo de generación: 13-12-2025 a las 22:45:18
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -20,7 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `inventario_sistema`
 --
-
+CREATE DATABASE inventario_sistema;
+USE inventario_sistema;
 -- --------------------------------------------------------
 
 --
@@ -79,7 +80,8 @@ CREATE TABLE `empleados` (
 INSERT INTO `empleados` (`id_empleado`, `nombre`, `apellido`, `usuario`, `password_hash`, `rol`, `correo`, `telefono`, `estatus`, `puesto`, `horario`, `fecha_registro`) VALUES
 (1, 'Gustavo ', 'Orduño Angulo', 'Gusgus', '$2y$10$DJOemxhIgxHib5hqE1MrXuNliCYCNCgRXf3n5pAyQWW418FXzxUxq', 'ADMINISTRADOR', 'gusordu100@gmail.com', '6671995960', 'ACTIVO', 'Administrador', '9:00-18:00', '2025-12-04 16:06:23'),
 (2, 'Susana Valentina Vega Garcia', 'Vega Garcia', 'Susan', '$2y$10$07pJrf.aP9ngkm39SANvlOuRezfTgff7r2vdrYuDbBEaW2sVfQm3q', 'ADMINISTRADOR', 'sv.vega23@info.uas.edu.mx', '6671108991', 'ACTIVO', 'Administrador', '9:00-18:00', '2025-12-04 16:54:46'),
-(3, 'Guimel', 'Bustillos Landa', 'Guimel', '$2y$10$aG8oxH0e0Mpsdm29QN7l5.lK33//YavpZYP0QBCi6pkqIlLahZBPq', 'EMPLEADO', 'Guimel@gmail.com', '6672334455', 'ACTIVO', 'Empleado', '9:00-18:00', '2025-12-04 16:56:00');
+(3, 'Guimel', 'Bustillos Landa', 'Guimel', '$2y$10$aG8oxH0e0Mpsdm29QN7l5.lK33//YavpZYP0QBCi6pkqIlLahZBPq', 'EMPLEADO', 'Guimel@gmail.com', '6672334455', 'INACTIVO', 'Empleado', '9:00-18:00', '2025-12-04 16:56:00'),
+(4, 'Ricardo', 'Cazares', 'Ricardo', '$2y$10$4/9lXKKTUhllesZIIt/fRe5hXk2uwkSJqp71yeuoazCqaZ0SduUk.', 'EMPLEADO', 'Ric@gmail.com', '6673445566', 'ACTIVO', 'Empleado', '9:00-18:00', '2025-12-13 21:44:22');
 
 -- --------------------------------------------------------
 
@@ -276,7 +278,7 @@ ALTER TABLE `detalle_venta_prueba`
 -- AUTO_INCREMENT de la tabla `empleados`
 --
 ALTER TABLE `empleados`
-  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `movimientos_stock`
