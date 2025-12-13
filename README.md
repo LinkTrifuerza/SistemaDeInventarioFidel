@@ -365,7 +365,8 @@ Tras cada operación importante (crear, editar, inactivar, registrar órdenes o 
 ### Base de datos en mysql
 ![BASE DE DATOS](PNG/BASE%20DE%20DATOS.png)
 
-###Entidades y atributos
+### Entidades y atributos
+
 Empleado
 • id_empleado (PK)
 • nombre
@@ -379,6 +380,7 @@ Empleado
 • puesto
 • horario
 • fecha_registro
+
 Proveedor
 • id_proveedor (PK)
 • nombre
@@ -388,12 +390,12 @@ Proveedor
 • direccion
 • categoria (tipo de productos que suministra)
 • estatus (ACTIVO / INACTIVO)
+
 Producto
 • id_producto (PK)
 • nombre
 • categoria
 • descripcion
-
 • precio (precio de venta)
 • stock_actual
 • stock_minimo
@@ -401,6 +403,7 @@ Producto
 • id_proveedor (FK → Proveedor)
 • fecha_registro
 • estatus (ACTIVO / INACTIVO)
+
 OrdenProveedor (ticket de compra a proveedor)
 • id_orden (PK)
 • id_proveedor (FK → Proveedor)
@@ -409,6 +412,7 @@ OrdenProveedor (ticket de compra a proveedor)
 • nombre_empresa_emisora
 • id_empleado (FK → Empleado)
 • tipo_orden (NORMAL / INICIAL)
+
 DetalleOrdenProveedor
 • id_detalle (PK)
 • id_orden (FK → OrdenProveedor)
@@ -416,21 +420,23 @@ DetalleOrdenProveedor
 • cantidad
 • costo_unitario
 • subtotal
+
 VentaPrueba (ticket de venta simulada)
 • id_venta (PK)
 • fecha
 • total
 • nombre_cliente
 • id_empleado (FK → Empleado)
-DetalleVentaPrueba
 
+DetalleVentaPrueba
 • id_detalle (PK)
 • id_venta (FK → VentaPrueba)
 • id_producto (FK → Producto)
 • cantidad
 • precio_unitario
 • subtotal
-Notificacion
+
+Notificación
 • id_notificacion (PK)
 • id_empleado_destino (FK → Empleado, opcional / null para general)
 • tipo (STOCK_MINIMO / STOCK_MAXIMO)
@@ -438,6 +444,7 @@ Notificacion
 • id_producto (FK → Producto)
 • leida (0/1)
 • fecha_creacion
+
 MovimientoStock
 • id_movimiento (PK)
 • id_producto (FK → Producto)
@@ -447,7 +454,7 @@ MovimientoStock
 • referencia (ej. ORDEN-1, VENTA-3)
 • fecha
 
-###El script SQL para crear la base de datos está en:
+### El script SQL para crear la base de datos está en:
 
 - [`inventario_sistema.sql`](DB/inventario_sistema.sql)
 
