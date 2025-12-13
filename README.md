@@ -53,6 +53,35 @@ falta
 
 ![Diagrama Entidad Relación](PNG/DIAGRAMA%20ENTIDAD%20RELACION.png)
 
+### Relaciones del modelo
+• Empleado – VentaPrueba
+• 1 Empleado → muchas ventas de prueba
+• Relación 1 a N (Empleado registra las ventas de prueba)
+• Empleado – OrdenProveedor
+• 1 Empleado → muchas órdenes a proveedores
+• Relación 1 a N (Administrador que genera órdenes)
+
+• Proveedor – Producto
+• 1 Proveedor → muchos productos
+• Cada producto tiene un proveedor asignado
+• Relación 1 a N
+• OrdenProveedor – DetalleOrdenProveedor – Producto
+• Una orden contiene varios productos comprados
+• Un producto puede estar en muchas órdenes
+• Relación N a N resuelta con DetalleOrdenProveedor (1 OrdenProveedor → N
+Detalles, 1 Producto → N Detalles)
+• VentaPrueba – DetalleVentaPrueba – Producto
+• Una venta de prueba contiene varios productos
+• Un producto puede estar en muchas ventas de prueba
+• Relación N a N resuelta con DetalleVentaPrueba
+• Producto – Notificacion
+• 1 Producto → muchas notificaciones de stock
+• Relación 1 a N (notificaciones generadas cuando el stock llega a mínimo/máximo)
+• Producto – MovimientoStock
+• 1 Producto → muchos movimientos de stock (entradas/salidas)
+• Relación 1 a N
+• Empleado – Notificacion
+• 1 Empleado puede recibir muchas notificaciones
 ## 6. ARQUITECTURA DEL SISTEMA
 Es una arquitectura monolítica PHP por módulos con capas básicas.
 
@@ -325,7 +354,89 @@ Tras cada operación importante (crear, editar, inactivar, registrar órdenes o 
 
 ## 11. BASE DE DATOS
 
-El script SQL para crear la base de datos está en:
+###Entidades y atributos
+Empleado
+• id_empleado (PK)
+• nombre
+• apellido
+• usuario
+• password_hash
+• rol (ADMINISTRADOR / EMPLEADO)
+• correo
+• telefono
+• estatus (ACTIVO / INACTIVO)
+• puesto
+• horario
+• fecha_registro
+Proveedor
+• id_proveedor (PK)
+• nombre
+• empresa
+• telefono
+• correo
+• direccion
+• categoria (tipo de productos que suministra)
+• estatus (ACTIVO / INACTIVO)
+Producto
+• id_producto (PK)
+• nombre
+• categoria
+• descripcion
+
+• precio (precio de venta)
+• stock_actual
+• stock_minimo
+• stock_maximo
+• id_proveedor (FK → Proveedor)
+• fecha_registro
+• estatus (ACTIVO / INACTIVO)
+OrdenProveedor (ticket de compra a proveedor)
+• id_orden (PK)
+• id_proveedor (FK → Proveedor)
+• fecha
+• monto_total
+• nombre_empresa_emisora
+• id_empleado (FK → Empleado)
+• tipo_orden (NORMAL / INICIAL)
+DetalleOrdenProveedor
+• id_detalle (PK)
+• id_orden (FK → OrdenProveedor)
+• id_producto (FK → Producto)
+• cantidad
+• costo_unitario
+• subtotal
+VentaPrueba (ticket de venta simulada)
+• id_venta (PK)
+• fecha
+• total
+• nombre_cliente
+• id_empleado (FK → Empleado)
+DetalleVentaPrueba
+
+• id_detalle (PK)
+• id_venta (FK → VentaPrueba)
+• id_producto (FK → Producto)
+• cantidad
+• precio_unitario
+• subtotal
+Notificacion
+• id_notificacion (PK)
+• id_empleado_destino (FK → Empleado, opcional / null para general)
+• tipo (STOCK_MINIMO / STOCK_MAXIMO)
+• mensaje
+• id_producto (FK → Producto)
+• leida (0/1)
+• fecha_creacion
+MovimientoStock
+• id_movimiento (PK)
+• id_producto (FK → Producto)
+• tipo (ENTRADA / SALIDA)
+• cantidad
+• motivo (ORDEN_PROVEEDOR, VENTA_PRUEBA, ALTA_INICIAL, etc.)
+• referencia (ej. ORDEN-1, VENTA-3)
+• fecha
+
+###El script SQL para crear la base de datos está en:
 
 - [`inventario_sistema.sql`](DB/inventario_sistema.sql)
 
