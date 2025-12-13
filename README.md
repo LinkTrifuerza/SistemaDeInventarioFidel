@@ -73,7 +73,163 @@ Es una arquitectura monolítica PHP por módulos con capas básicas.
 [![Prototipo en Figma](PNG/figma-prototipo.png)]
 (https://www.figma.com/design/tV3GLAKigTK7OUxLz2nHAS/Login-fidel?node-id=0-1&t=qbs3Jjmn3ZzE1pmE-1)
 ## 8. ESTRUCTURA DEL PROYECTO
-## 9. INSTALACIÓN Y CONFIGURACIÓN
+
+- `README.md`  
+  Documentación general del sistema.
+
+- Carpeta `DB/`  
+  - `inventario_sistema.sql`  
+    Script SQL para crear la base de datos del sistema.
+
+- Carpeta `PNG/`  
+  Imágenes y diagramas del proyecto (diagramas ER, casos de uso, etc.).
+
+- Carpeta `app/`  
+  Código fuente principal de la aplicación web:
+  
+  - `index.php`  
+    Página de inicio / dashboard del sistema.
+
+  - `login.php`, `logout.php`  
+    Manejo de inicio y cierre de sesión de usuarios.
+
+  - `db.php`  
+    Conexión centralizada a la base de datos MySQL.
+
+  - `auth_middleware.php`  
+    Validación de sesión y permisos según el rol (ADMINISTRADOR / EMPLEADO).
+
+  - `header.php`, `navbar.php`, `footer.php`  
+    Plantillas compartidas para cabecera, menú de navegación y pie de página.
+
+  - `styles.css`  
+    Hoja de estilos principal del sistema.
+
+  - Carpeta `IMG/`  
+    Recursos gráficos utilizados por la aplicación (logos, iconos, etc.).
+
+  - Módulo **Empleados**  
+    - `empleados_list.php`  
+    - `empleados_form.php`  
+    - `empleados_save.php`  
+    Listado, alta/edición y actualización de empleados.
+
+  - Módulo **Proveedores**  
+    - `proveedores_list.php`  
+    - `proveedores_form.php`  
+    - `proveedores_save.php`  
+    Gestión de proveedores y preparación de órdenes.
+
+  - Módulo **Inventario / Productos**  
+    - `inventario_list.php`  
+    - `inventario_form.php`  
+    - `inventario_save.php`  
+    Administración de productos, stock y proveedor asociado.
+
+  - Módulo **Órdenes a proveedores**  
+    - `orden_proveedor_form.php`  
+    - `orden_proveedor_guardar.php`  
+    - `tickets_ordenes.php`  
+    Registro de órdenes de compra (NORMAL e INICIAL) y consulta de tickets.
+
+  - Módulo **Ventas de prueba**  
+    - `ventas_prueba.php`  
+    - `ventas_prueba_guardar.php`  
+    - `tickets_ventas_prueba.php`  
+    Simulación de ventas y generación de tickets de prueba.
+
+  - Módulo **Notificaciones y movimientos**  
+    - `notificaciones_list.php`  
+    - `movimientos_stock_list.php`  
+    Consulta de alertas de stock y del historial de movimientos de inventario.
+
+  - Módulo **Perfil de usuario**  
+    - `perfil.php`  
+    - `cambiar_password.php`  
+    Gestión de datos personales y cambio de contraseña del usuario.​
+## 9. INSTALACIÓN Y CONFIGURACIÓN (Guía de instalación y configuración)
+
+### 1. Requisitos previos
+
+1. Tener instalado **XAMPP** (o similar) con:
+   - Apache  
+   - MySQL  
+2. Contar con un navegador web (Chrome, Firefox, Edge, etc.).
+
+---
+
+### 2. Descargar el proyecto desde GitHub
+
+1. Entrar al repositorio:  
+   `https://github.com/LinkTrifuerza/SistemaDeInventarioFidel`  
+2. Hacer clic en el botón verde **Code** → **Download ZIP**.  
+3. Descomprimir el archivo ZIP en tu computadora.  
+4. Dentro de la carpeta descomprimida encontrarás, entre otros:
+   - Carpeta `app/`  (código PHP + imágenes).  
+   - Carpeta `DB/`   (script de base de datos `inventario_sistema.sql`).  
+   - Carpeta `PNG/`  (diagramas e imágenes del proyecto).
+
+---
+
+### 3. Copiar el proyecto a `htdocs`
+
+1. Abrir la carpeta descomprimida del proyecto.  
+2. Copiar todo el contenido del repositorio (incluyendo `app`, `DB`, `PNG`, `README.md`, etc.).  
+3. Pegar ese contenido dentro de la carpeta `htdocs` de XAMPP, por ejemplo:
+
+C:\xampp\htdocs\SistemaDeInventarioFidel\
+
+De forma que queden rutas como:
+
+C:\xampp\htdocs\SistemaDeInventarioFidel\app\login.php
+C:\xampp\htdocs\SistemaDeInventarioFidel\DB\inventario_sistema.sql
+
+---
+
+### 4. Crear la base de datos en MySQL (phpMyAdmin)
+
+1. Abrir **XAMPP** y encender:
+- Apache  
+- MySQL  
+2. En el navegador, ir a:  
+`http://localhost/phpmyadmin`  
+3. Hacer clic en la pestaña **Importar**.  
+4. Pulsar **Seleccionar archivo** y elegir:
+
+C:\xampp\htdocs\SistemaDeInventarioFidel\DB\inventario_sistema.sql
+
+5. Dejar las opciones por defecto y hacer clic en **Continuar**.  
+6. Se creará la base de datos **`inventario_sistema`** con todas las tablas necesarias.
+
+---
+
+### 5. Verificar la conexión a la base de datos
+
+1. Abrir el archivo:
+
+C:\xampp\htdocs\SistemaDeInventarioFidel\app\db.php
+
+2. Comprobar que los datos de conexión coinciden con tu entorno XAMPP (por defecto):
+
+$host = 'localhost';
+$db = 'inventario_sistema';
+$user = 'root';
+$pass = '';
+
+3. Si tu usuario o contraseña de MySQL son diferentes, modificarlos aquí y guardar el archivo.
+
+---
+
+### 6. Iniciar el servidor y acceder al sistema
+
+1. Asegurarse en XAMPP de que **Apache** y **MySQL** estén en ejecución.  
+2. En el navegador, ir a:
+
+http://localhost/SistemaDeInventarioFidel/app
+
+3. Iniciar sesión con un usuario registrado o si no registrarse con sus datos, si elige el rol de administrador, deberá ingresar la contraseña de administrador para poder continuar con el proceso.  
+4. Una vez autenticado, se podrá acceder al menú principal y a todos los módulos del sistema (empleados, proveedores, inventario, órdenes, ventas de prueba, notificaciones, etc.).
+
 ## 10. USO Y OPERACIÓN DEL SISTEMA
 ## 11. BASE DE DATOS
 
