@@ -368,91 +368,92 @@ Tras cada operación importante (crear, editar, inactivar, registrar órdenes o 
 ### Entidades y atributos
 
 Empleado
-• id_empleado (PK)
-• nombre
-• apellido
-• usuario
-• password_hash
-• rol (ADMINISTRADOR / EMPLEADO)
-• correo
-• telefono
-• estatus (ACTIVO / INACTIVO)
-• puesto
-• horario
-• fecha_registro
+- id_empleado (PK)
+- nombre
+- apellido
+- usuario
+- password_hash
+- rol (ADMINISTRADOR / EMPLEADO)
+- correo
+- telefono
+- estatus (ACTIVO / INACTIVO)
+- puesto
+- horario
+- fecha_registro
 
 Proveedor
-• id_proveedor (PK)
-• nombre
-• empresa
-• telefono
-• correo
-• direccion
-• categoria (tipo de productos que suministra)
-• estatus (ACTIVO / INACTIVO)
+- id_proveedor (PK)
+- nombre
+- empresa
+- telefono
+- correo
+- direccion
+- categoria (tipo de productos que suministra)
+- estatus (ACTIVO / INACTIVO)
 
 Producto
-• id_producto (PK)
-• nombre
-• categoria
-• descripcion
-• precio (precio de venta)
-• stock_actual
-• stock_minimo
-• stock_maximo
-• id_proveedor (FK → Proveedor)
-• fecha_registro
-• estatus (ACTIVO / INACTIVO)
+- id_producto (PK)
+- nombre
+- categoria
+- descripcion
+- precio (precio de venta)
+- stock_actual
+- stock_minimo
+- stock_maximo
+- id_proveedor (FK → Proveedor)
+- fecha_registro
+- estatus (ACTIVO / INACTIVO)
 
 OrdenProveedor (ticket de compra a proveedor)
-• id_orden (PK)
-• id_proveedor (FK → Proveedor)
-• fecha
-• monto_total
-• nombre_empresa_emisora
-• id_empleado (FK → Empleado)
-• tipo_orden (NORMAL / INICIAL)
+- id_orden (PK)
+- id_proveedor (FK → Proveedor)
+- fecha
+- monto_total
+- nombre_empresa_emisora
+- id_empleado (FK → Empleado)
+- tipo_orden (NORMAL / INICIAL)
 
 DetalleOrdenProveedor
-• id_detalle (PK)
-• id_orden (FK → OrdenProveedor)
-• id_producto (FK → Producto)
-• cantidad
-• costo_unitario
-• subtotal
+- id_detalle (PK)
+- id_orden (FK → OrdenProveedor)
+- id_producto (FK → Producto)
+- cantidad
+- costo_unitario
+- subtotal
 
 VentaPrueba (ticket de venta simulada)
-• id_venta (PK)
-• fecha
-• total
-• nombre_cliente
-• id_empleado (FK → Empleado)
+- id_venta (PK)
+- fecha
+- total
+- nombre_cliente
+- id_empleado (FK → Empleado)
 
 DetalleVentaPrueba
-• id_detalle (PK)
-• id_venta (FK → VentaPrueba)
-• id_producto (FK → Producto)
-• cantidad
-• precio_unitario
-• subtotal
+- id_detalle (PK)
+- id_venta (FK → VentaPrueba)
+- id_producto (FK → Producto)
+- cantidad
+- precio_unitario
+- subtotal
 
 Notificación
-• id_notificacion (PK)
-• id_empleado_destino (FK → Empleado, opcional / null para general)
-• tipo (STOCK_MINIMO / STOCK_MAXIMO)
-• mensaje
-• id_producto (FK → Producto)
-• leida (0/1)
-• fecha_creacion
+- id_notificacion (PK)
+- id_empleado_destino (FK → Empleado, opcional / null para general)
+- tipo (STOCK_MINIMO / STOCK_MAXIMO)
+- mensaje
+- id_producto (FK → Producto)
+- leida (0/1)
+- fecha_creacion
 
 MovimientoStock
-• id_movimiento (PK)
-• id_producto (FK → Producto)
-• tipo (ENTRADA / SALIDA)
-• cantidad
-• motivo (ORDEN_PROVEEDOR, VENTA_PRUEBA, ALTA_INICIAL, etc.)
-• referencia (ej. ORDEN-1, VENTA-3)
-• fecha
+- id_movimiento (PK)
+- id_producto (FK → Producto)
+- tipo (ENTRADA / SALIDA)
+- cantidad
+- motivo (ORDEN_PROVEEDOR, VENTA_PRUEBA, ALTA_INICIAL, etc.)
+- referencia (ej. ORDEN-1, VENTA-3)
+- fecha
+
 
 ### El script SQL para crear la base de datos está en:
 
