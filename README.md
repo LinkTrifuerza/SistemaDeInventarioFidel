@@ -163,7 +163,7 @@ Es una arquitectura monolítica PHP por módulos con capas básicas.
 1. Entrar al repositorio:  
    `https://github.com/LinkTrifuerza/SistemaDeInventarioFidel`  
 2. Hacer clic en el botón verde **Code** → **Download ZIP**.  
-3. Descomprimir el archivo ZIP en tu computadora.  
+3. Descomprimir el archivo ZIP "SistemaDeInventarioFidel-main.zip" en tu computadora.  
 4. Dentro de la carpeta descomprimida encontrarás, entre otros:
    - Carpeta `app/`  (código PHP + imágenes).  
    - Carpeta `DB/`   (script de base de datos `inventario_sistema.sql`).  
@@ -177,12 +177,12 @@ Es una arquitectura monolítica PHP por módulos con capas básicas.
 2. Copiar todo el contenido del repositorio (incluyendo `app`, `DB`, `PNG`, `README.md`, etc.).  
 3. Pegar ese contenido dentro de la carpeta `htdocs` de XAMPP, por ejemplo:
 
-C:\xampp\htdocs\SistemaDeInventarioFidel\
+C:\xampp\htdocs\SistemaDeInventarioFidel-main\
 
 De forma que queden rutas como:
 
-C:\xampp\htdocs\SistemaDeInventarioFidel\app\login.php
-C:\xampp\htdocs\SistemaDeInventarioFidel\DB\inventario_sistema.sql
+C:\xampp\htdocs\SistemaDeInventarioFidel-main\app\login.php
+C:\xampp\htdocs\SistemaDeInventarioFidel-main\DB\inventario_sistema.sql
 
 ---
 
@@ -196,7 +196,7 @@ C:\xampp\htdocs\SistemaDeInventarioFidel\DB\inventario_sistema.sql
 3. Hacer clic en la pestaña **Importar**.  
 4. Pulsar **Seleccionar archivo** y elegir:
 
-C:\xampp\htdocs\SistemaDeInventarioFidel\DB\inventario_sistema.sql
+C:\xampp\htdocs\SistemaDeInventarioFidel-main\DB\inventario_sistema.sql
 
 5. Dejar las opciones por defecto y hacer clic en **Continuar**.  
 6. Se creará la base de datos **`inventario_sistema`** con todas las tablas necesarias.
@@ -207,7 +207,7 @@ C:\xampp\htdocs\SistemaDeInventarioFidel\DB\inventario_sistema.sql
 
 1. Abrir el archivo:
 
-C:\xampp\htdocs\SistemaDeInventarioFidel\app\db.php
+C:\xampp\htdocs\SistemaDeInventarioFidel-main\app\db.php
 
 2. Comprobar que los datos de conexión coinciden con tu entorno XAMPP (por defecto):
 
@@ -225,7 +225,7 @@ $pass = '';
 1. Asegurarse en XAMPP de que **Apache** y **MySQL** estén en ejecución.  
 2. En el navegador, ir a:
 
-http://localhost/SistemaDeInventarioFidel/app
+http://localhost/SistemaDeInventarioFidel-main/app
 
 3. Iniciar sesión con un usuario registrado o si no registrarse con sus datos, si elige el rol de administrador, deberá ingresar la contraseña de administrador para poder continuar con el proceso.  
 4. Una vez autenticado, se podrá acceder al menú principal y a todos los módulos del sistema (empleados, proveedores, inventario, órdenes, ventas de prueba, notificaciones, etc.).
@@ -236,7 +236,7 @@ http://localhost/SistemaDeInventarioFidel/app
 
 1. Accede a la URL del sistema:  
 
-http://localhost/SistemaDeInventarioFidel/app
+http://localhost/SistemaDeInventarioFidel-main/app
 
 2. Ingresa tu **usuario** y **contraseña**.  
 3. Según tu rol (**ADMINISTRADOR** o **EMPLEADO**) se habilitarán diferentes opciones en el menú principal.
