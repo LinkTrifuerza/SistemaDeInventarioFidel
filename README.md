@@ -7,7 +7,7 @@
 - Ruiz Arias Omar  
 - Vega Garcia Susana Valentina  
 
-## DESCRIPCIÓN DEL PROYECTO
+## INTRODUCCIÓN
 Es un sistema web de inventario desarrollado en PHP con MySQL, pensado para pequeñas empresas que necesitan controlar productos, proveedores y movimientos de stock.  
 Permite registrar productos con stock mínimo y máximo, generar órdenes de compra a proveedores, registrar ventas de prueba y llevar un historial de entradas y salidas de inventario.  
 Incluye gestión de empleados con roles (administrador y empleado), autenticación con login, notificaciones automáticas cuando el stock llega a niveles críticos y reportes básicos como tickets de órdenes y tickets de ventas de prueba.
