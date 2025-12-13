@@ -362,6 +362,9 @@ Tras cada operación importante (crear, editar, inactivar, registrar órdenes o 
 
 ## 11. BASE DE DATOS
 
+### Base de datos en mysql
+![BASE DE DATOS](PNG/BASE%20DE%20DATOS.png)
+
 ###Entidades y atributos
 Empleado
 • id_empleado (PK)
