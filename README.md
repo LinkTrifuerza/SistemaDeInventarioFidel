@@ -231,6 +231,98 @@ http://localhost/SistemaDeInventarioFidel/app
 4. Una vez autenticado, se podrá acceder al menú principal y a todos los módulos del sistema (empleados, proveedores, inventario, órdenes, ventas de prueba, notificaciones, etc.).
 
 ## 10. USO Y OPERACIÓN DEL SISTEMA
+
+### 1. Inicio de sesión
+
+1. Accede a la URL del sistema:  
+
+http://localhost/SistemaDeInventarioFidel/app
+
+2. Ingresa tu **usuario** y **contraseña**.  
+3. Según tu rol (**ADMINISTRADOR** o **EMPLEADO**) se habilitarán diferentes opciones en el menú principal.
+
+---
+
+### 2. Gestión de empleados (solo administrador)
+
+1. En el menú, ir a **Empleados**.  
+2. Desde esta sección puedes:
+- Ver la lista de empleados registrados.  
+- Crear un nuevo empleado con botón **Nuevo**.  
+- Editar un empleado existente con el botón **Editar**.  
+3. En el formulario de edición puedes cambiar datos personales, rol y estatus (ACTIVO/INACTIVO).
+
+---
+
+### 3. Gestión de proveedores
+
+1. En el menú, ir a **Proveedores**.  
+2. Funciones disponibles:
+- Registrar nuevos proveedores.  
+- Editar datos de proveedores existentes.  
+- Cambiar estatus a **INACTIVO** para dejar de usarlos en órdenes.  
+3. Solo los proveedores en estado **ACTIVO** permiten generar órdenes de compra.
+
+---
+
+### 4. Gestión de productos e inventario
+
+1. En el menú, ir a **Inventario**.  
+2. Desde esta sección puedes:
+- Ver la lista de productos con su stock actual, mínimo y máximo.  
+- Registrar nuevos productos indicando proveedor, precio de venta y niveles de stock.  
+- Editar productos ya registrados.  
+- Inactivar productos para que dejen de usarse en ventas y órdenes.  
+3. Al crear un producto con stock inicial, el sistema puede generar una **orden inicial** que registra esa primera entrada al inventario.
+
+---
+
+### 5. Órdenes de compra a proveedores
+
+1. En **Proveedores**, para un proveedor ACTIVO, usar la opción **Hacer pedido**.  
+2. Se abrirá el formulario de orden donde se seleccionan:
+- Productos.  
+- Cantidades.  
+- Costos unitarios.  
+3. Al guardar:
+- Se genera un **ticket de orden**.  
+- Se actualiza el **stock de los productos** (entrada).  
+- Se registra el movimiento en el historial de stock.  
+4. Las órdenes generadas pueden consultarse en **Tickets de órdenes**.
+
+---
+
+### 6. Ventas de prueba
+
+1. En el menú, ir a **Ventas de prueba**.  
+2. Selecciona productos y cantidades para simular una venta.  
+3. Al guardar:
+- Se genera un **ticket de venta de prueba**.  
+- Se descuenta el stock de los productos involucrados (salida).  
+4. Los tickets pueden consultarse en **Tickets de ventas de prueba**.
+
+---
+
+### 7. Notificaciones y movimientos de stock
+
+1. En el menú, ir a **Notificaciones** para ver alertas cuando un producto:
+- Llega al **stock mínimo**.  
+- Supera el **stock máximo** configurado.  
+2. En **Movimientos de stock** puedes consultar el historial de:
+- Entradas por órdenes de compra o altas iniciales.  
+- Salidas por ventas de prueba u otros motivos.
+
+---
+
+### 8. Perfil de usuario y cambio de contraseña
+
+1. En el menú, ir a **Perfil**.  
+2. Desde esta sección puedes:
+- Ver y actualizar tus datos básicos.  
+- Cambiar tu contraseña en la opción correspondiente (ingresando la contraseña actual y la nueva).  
+
+Tras cada operación importante (crear, editar, inactivar, registrar órdenes o ventas), el sistema devuelve al listado correspondiente para que puedas verificar los cambios realizados.
+
 ## 11. BASE DE DATOS
 
 El script SQL para crear la base de datos está en:
