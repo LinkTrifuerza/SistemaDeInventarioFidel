@@ -16,7 +16,7 @@ Es un sistema web de gestión de inventario desarrollado en PHP con MySQL que pe
 El sistema maneja usuarios con roles de administrador y empleado, incorpora autenticación con login, notificaciones automáticas cuando el stock llega a niveles críticos y mantiene un historial de movimientos de stock y tickets de órdenes y ventas de prueba para consulta y seguimiento.
 
 ## 3. REQUISITOS
-# a.Requisitos funcionales
+### a.Requisitos funcionales
 
 1. El sistema permite el **inicio de sesión de usuarios** mediante nombre de usuario y contraseña, diferenciando entre roles de **administrador** y **empleado**.  
 2. El sistema permite al administrador **gestionar empleados**: registrar, editar y cambiar el estatus (**ACTIVO / INACTIVO**).  
@@ -33,7 +33,7 @@ El sistema maneja usuarios con roles de administrador y empleado, incorpora aute
 13. El sistema permite **consultar el inventario** con filtros por nombre, categoría, proveedor y estatus del producto.  
 14. El sistema permite al usuario autenticado **consultar y actualizar su propio perfil**, incluyendo cambio de contraseña.  
 
-# b.Requisitos no funcionales
+### b.Requisitos no funcionales
 
 1. El sistema está implementado como una **aplicación web monolítica** en **PHP** con base de datos **MySQL**, ejecutándose sobre **XAMPP** en entorno local.  
 2. El sistema responde a las operaciones típicas de consulta (listar productos, proveedores, tickets) en un **tiempo adecuado** para una base de datos de tamaño pequeño–medio.  
@@ -45,9 +45,9 @@ El sistema maneja usuarios con roles de administrador y empleado, incorpora aute
 8. El sistema permite realizar **copias de seguridad y restauración** de la información mediante exportación e importación de la base de datos en formato **SQL**.  
 
 ## 4. CASOS DE USO
-# a. Diagrama
+### a. Diagrama
 ![Casos de uso](PNG/CASOS%20DE%20USO.png)
-# b. Descripción 
+### b. Descripción 
 falta
 ## 5. ENTIDADES, ATRIBUTOS Y RELACIONES INCLUYENDO CARDINALIDAD, DIAGRAMA ENTIDAD RELACIÓN
 
@@ -72,13 +72,15 @@ Es una arquitectura monolítica PHP por módulos con capas básicas.
 
 [![Prototipo en Figma](PNG/figma-prototipo.png)]
 (https://www.figma.com/design/tV3GLAKigTK7OUxLz2nHAS/Login-fidel?node-id=0-1&t=qbs3Jjmn3ZzE1pmE-1)
-
+## 8. ESTRUCTURA DEL PROYECTO
+## 9. INSTALACIÓN Y CONFIGURACIÓN
+## 10. USO Y OPERACIÓN DEL SISTEMA
 ## 11. BASE DE DATOS
 
 El script SQL para crear la base de datos está en:
 
 - [`inventario_sistema.sql`](DB/inventario_sistema.sql)
-- 
+
 ## 12. CONCLUSION ACERCA DEL TRABAJO
 
 Desarrollar este sistema de inventario fue una experiencia en la que se pusieron en práctica muchos conceptos vistos en clase y que permitió afianzarlos en un proyecto real, a lo largo del desarrollo se aprendió a diseñar y normalizar una base de datos, a estructurar una aplicación web en PHP por módulos, a manejar correctamente claves foráneas e integridad referencial, y a trabajar con control de versiones usando Git y GitHub, lo que acercó el proyecto a una forma de trabajo más profesional.​​
