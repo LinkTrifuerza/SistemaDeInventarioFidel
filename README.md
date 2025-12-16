@@ -48,7 +48,7 @@ El sistema maneja usuarios con roles de administrador y empleado, incorpora aute
 ### a. Diagrama
 ![Casos de uso](PNG/CASOS%20DE%20USO.png)
 ### b. Descripción 
-![Iinciar sesión](PNG/1%Iniciar%Sesión.png)
+![Iinciar sesión](PNG/1%20Iniciar%20Sesión.png)
 
 ## 5. ENTIDADES, ATRIBUTOS Y RELACIONES INCLUYENDO CARDINALIDAD, DIAGRAMA ENTIDAD RELACIÓN
 
