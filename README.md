@@ -48,7 +48,23 @@ El sistema maneja usuarios con roles de administrador y empleado, incorpora aute
 ### a. Diagrama
 ![Casos de uso](PNG/CASOS%20DE%20USO.png)
 ### b. Descripción 
-![Iinciar sesión](PNG/1%20Iniciar%20Sesión.png)
+![Iniciar Sesión](PNG/1 Iniciar Sesión.png)
+![Consultar Inventario](PNG/2 Consultar Inventario.png)
+![Gestionar Perfil](PNG/3 Gestionar Perfil.png)
+![Cerrar Sesión](PNG/4 Cerrar Sesión.png)
+![Consultar notificaciones](PNG/5 Consultar notificaciones.png)
+![Consultar Tickets de Prueba](PNG/6 Consultar Tickets de Prueba.png)
+![Simular venta de prueba](PNG/7 Simular venta de prueba.png)
+![Generar orden](PNG/8 Generar orden.png)
+![Inactivar producto](PNG/9 Inactivar producto.png)
+![Editar Producto](PNG/10 Editar Producto.png)
+![Registrar producto](PNG/11 Registrar producto .png)
+![Añadir proveedor](PNG/12 Añadir proveedor.png)
+![Cambiar contraseña](PNG/13 Cambiar contraseña.png)
+![Consultar analisis de ventas](PNG/14 Consultar analisis de ventas.png)
+![Consultar Tickets de Ordenes](PNG/15 Consultar Tickets de Ordenes.png)
+![Registro](PNG/16 Registro.png)
+
 
 ## 5. ENTIDADES, ATRIBUTOS Y RELACIONES INCLUYENDO CARDINALIDAD, DIAGRAMA ENTIDAD RELACIÓN
 
