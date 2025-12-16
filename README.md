@@ -46,7 +46,7 @@ El sistema maneja usuarios con roles de administrador y empleado, incorpora aute
 
 ## 4. CASOS DE USO
 ### a. Diagrama
-![Casos de uso](PNG/CASOS%20DE%20USO.png)
+
 ### b. Descripción 
 ![Iniciar Sesión](PNG/1%20Iniciar%20Sesión.png)
 ![Consultar Inventario](PNG/2%20Consultar%20Inventario.png)
