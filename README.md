@@ -281,7 +281,7 @@ $pass = '';
 
 http://localhost/SistemaDeInventarioFidel-main/app
 
-3. Iniciar sesión con un usuario registrado o si no registrarse con sus datos, si elige el rol de administrador, deberá ingresar la contraseña de administrador para poder continuar con el proceso.  
+3. Iniciar sesión con un usuario registrado o si no registrarse con sus datos, si elige el rol de administrador, deberá ingresar la contraseña de administrador para poder continuar con el proceso (la contraseña de adminstrador es "123456789").  
 4. Una vez autenticado, se podrá acceder al menú principal y a todos los módulos del sistema (empleados, proveedores, inventario, órdenes, ventas de prueba, notificaciones, etc.).
 
 ## 10. USO Y OPERACIÓN DEL SISTEMA
